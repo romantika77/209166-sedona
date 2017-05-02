@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -30,15 +31,15 @@
             <h2>СЕДОНА &#8211; небольшой городок в Аризоне, заслуживающий большего!</h2>
             <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
           </div>
-          <div class="features-item">
-            <div class="item-title">   
+          <div class="features-item item-1">
+            <div class="item-title">
               <h2>Настоящий городок</h2>
               <span>&#8211; №1 &#8211;</span>
               <p>Седона &#8211; не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <div class="item-photo">
+            <!-- <div class="item-photo">
               <img src="img/feature-1.jpg" alt="Sedona-city" width="800" height="256">
-            </div>
+            </div> -->
           </div>
           <div class="features-adv">
             <div class="features-item-adv adv-1">
@@ -54,28 +55,29 @@
                 <p>Не только китайского, но и местного производства!</p>
               </div>
             </div>
-          <div class="features-item">
+          <div class="features-item item-2">
             <div class="item-title"> 
-              <h2>Там есть мост дьявола</h2>
+              <h2>Там есть<br>
+               мост дьявола</h2>
               <span>&#8211; №2 &#8211;</span>
               <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
-            <div class="item-photo">
+            <!-- <div class="item-photo">
               <img src="img/feature-2.jpg" alt="Sedona-bridge" width="800" height="256">
-            </div>
+            </div> -->
           </div>
           <div class="features-info">
-            <div class="item-info">
+            <div class="item-info info-1">
               <h2>Небольшая площадь</h2>
               <span>&#8211; №3 &#8211;</span>
               <p>Все достопримечательности находятся очень близко</p>
             </div>
-            <div class="item-info">
+            <div class="item-info info-2">
               <h2>Красивая дорога</h2>
               <span>&#8211; №4 &#8211;</span>
               <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
-            <div class="item-info">
+            <div class="item-info info-3">
               <h2>Мало туристов</h2>
               <span>&#8211; №5 &#8211;</span>
               <p>Большинство едет в гранд каньон и толпится там</p>
@@ -84,17 +86,44 @@
         </div>
         <section class="hotel-search">
           <p class="title">Заинтересовались?</p>
-          <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <p>Укажите предполагаемые даты поездки,<br>
+           и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a href="#" class="btn btn-hotel">Поиск гостиницы в Седоне</a>
           <form class="modal-hotel" action="#" method="get">
-            <label for="arrival-field">Дата заезда:</label>
-            <input type="date" name="arrival" id="arrival-field">
-            <label for="exit-field">Дата выезда:</label>
-            <input type="date" name="exit" id="exit-field">
-            <label for="adults-field">Взрослые:</label>
-            <input type="number" name="adults" id="adults-field" min="0" max="100">
-            <label for="children-field">Дети:</label>
-            <input type="number" name="children" id="children-field" min="0" max="100">
+            <fieldset class="arrival-container">
+              <div class="wrapper">
+                <label for="arrival-field">Дата заезда:</label>
+                <input type="text" name="arrival" id="arrival-field" value="24 апреля 2017">
+                <span class="calendar"></span>
+              </div>
+            </fieldset>
+            <fieldset class="exit-container">
+              <div class="wrapper">
+                <label for="exit-field">Дата выезда:</label>
+                <input type="text" name="exit" id="exit-field" value="4 июля 2017">
+                <span class="calendar"></span>
+              </div>
+            </fieldset> 
+            <fieldset class="amount-container">
+              <div class="wrapper">
+                <div class="half-width half-width-1">
+                  <label for="adults-field">Взрослые:</label>
+                  <div class="amount">
+                    <span class="minus"></span>
+                    <input type="text" name="adults" id="adults-field" value="2">
+                    <span class="plus"></span>
+                  </div>
+                </div>
+                <div class="half-width half-width-2">
+                  <label for="children-field">Дети:</label>
+                  <div class="amount">
+                    <span class="minus"></span>
+                    <input type="text" name="children" id="children-field" value="0">
+                    <span class="plus"></span>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
             <input class="btn btn-form" type="submit" value="Найти">
           </form>
         </section>   
