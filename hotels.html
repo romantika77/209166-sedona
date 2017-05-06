@@ -18,20 +18,20 @@
             <li><a href="#">Информация</a></li>
             <li><a href="#">Фото и видео</a></li>
             <li><a href="#">Карта штата</a></li>
-            <li><a href="#">Гостиницы</a></li>
+            <li><a class="current" href="#">Гостиницы</a></li>
           </ul>
         </nav>
       </header>
       <div class="select">
-        <form class="select-hotels" action="#" method="post">
+        <form class="select-hotels" action="https://echo.htmlacademy.ru" method="post">
           <div class="select-item">
             <h3>Инфраструктура:</h3>
             <p>
-              <input type="checkbox" name="service" id="checkbox-1" value="pool" checked>
+              <input type="checkbox" name="service" id="checkbox-1" value="pool" checked disabled>
               <label for="checkbox-1">Бассейн</label>
             </p>
             <p>
-              <input type="checkbox" name="service" id="checkbox-2" value="parking">
+              <input type="checkbox" name="service" id="checkbox-2" value="parking" disabled>
               <label for="checkbox-2">Парковка</label>
             </p>
             <p>
@@ -55,11 +55,11 @@
             </p>
           </div>
           <div class="range-select-item">
-            <h3>Стоимость в сутки(Р):</h3>
+            <h3>Стоимость в сутки (Р):</h3>
             <div class="range-filter">
               <div class="price-controls">
-                <label class="min-price">от<input name="min-price" type="text" value="0"></label>
-                <label class="max-price">до<input name="max-price" type="text" value="3000"></label>
+                <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+                <label class="max-price">до <input name="max-price" type="text" value="3000"></label>
               </div>
               <div class="range-controls">
                 <div class="scale">
@@ -77,25 +77,29 @@
         <div class="list-filter">
           <b>Найдено: 3</b>
           <span>Сортировка:</span>
-          <a class="active" href="#">По цене</a>
-          <a href="#">По типу</a>
-          <a href="#">По рейтингу</a>
-          <a href="#">По возрастанию</a>
-          <a class="active" href="#">По убыванию</a>
+          <ul class="filter-types">
+            <li><a class="active" href="#">По цене</a></li>
+            <li><a href="#">По типу</a></li>
+            <li><a href="#">По рейтингу</a></li>
+          </ul>    
+          <div class="filter-pointers">
+            <a class="arrow arrow-up" href="#">По возрастанию</a>
+            <a class="arrow arrow-down active" href="#">По убыванию</a>
+          </div>
         </div>
         <div class="hotel-item">
           <figure class="hotel-photo">
             <img src="img/amara.jpg" alt="Amara Resort & Spa" width="135" height="90">
           </figure>
           <div class="description">
-            <h2>Amara Resort &#38; Spa</h2>
+            <a href="#"><h2>Amara Resort &#38; Spa</h2></a>
             <span>Гостиница</span>
             <span>от 4000 р.</span>
             <a href="#" class="btn btn-details">Подробнее</a>
             <a href="#" class="btn btn-booking">Забронировать</a>
           </div>
           <div class="hotel-rating">
-            <div class="stars" aria-label="5 звезд"></div>
+            <div class="stars four-stars" aria-label="4 звезды"></div>
             <span class="rating-value">Рейтинг: 8,5</span>
           </div>
         </div>
@@ -104,18 +108,14 @@
             <img src="img/desert.jpg" alt="Desert Quail Inn" width="135" height="90">
           </figure>
           <div class="description">
-            <h2>Desert Quail Inn</h2>
+            <a href="#"><h2>Desert Quail Inn</h2></a>
             <span>Мотель</span>
             <span>от 3000 р.</span>
             <a href="#" class="btn btn-details">Подробнее</a>
             <a href="#" class="btn btn-booking">Забронировать</a>
           </div>
           <div class="hotel-rating">
-            <div class="stars">
-              <i></i>
-              <i></i>
-              <i></i>
-            </div>
+            <div class="stars three-stars" aria-label="3 звезды"></div>
             <span class="rating-value">Рейтинг: 8,9</span>
           </div>
         </div>
@@ -124,17 +124,14 @@
             <img src="img/villas.jpg" alt="Villas at Poco Diablo" width="135" height="90">
           </figure>
           <div class="description">
-            <h2>Villas at Poco Diablo</h2>
+            <a href="#"><h2>Villas at Poco Diablo</h2></a>
             <span>Апартаменты</span>
             <span>от 2000 р.</span>
             <a href="#" class="btn btn-details">Подробнее</a>
             <a href="#" class="btn btn-booking">Забронировать</a>
           </div>
           <div class="hotel-rating">
-            <div class="stars">
-              <i></i>
-              <i></i>
-            </div>
+            <div class="stars two-stars" aria-label="2 звезды"></div>
             <span class="rating-value">Рейтинг: 9,2</span>
           </div>
         </div>
@@ -148,7 +145,7 @@
         </section>
         <section class="copyright">
           <span>Website by</span>
-          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/html-logo-peace.png" alt="Html-logo" width="113" height="39"></a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Html-academy"></a>
         </section>
       </footer>  
     </div> 
