@@ -905,12 +905,12 @@ img {
   opacity: 1;
 }
 
-.arrow-up:active:before {
+.arrow-up:active::before {
   border-bottom: 10px solid #81b3d2;
   opacity: 1;
 }
 
-.arrow-down:active:before {
+.arrow-down:active::before {
   border-top: 10px solid #81b3d2;
   opacity: 1;
 }
