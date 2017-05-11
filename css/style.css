@@ -28,6 +28,14 @@ img {
   height: auto;
 }
 
+.visually-hidden,
+.copyright .visually-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 0;
+  height: 0;
+}
+
 .features h2 {
   font-size: 21px;
   line-height: 21px;
@@ -483,7 +491,6 @@ img {
 }
 
 .calendar {
-  content: "";
   position: absolute;
   top: 8px;
   right: 8px;
@@ -493,6 +500,7 @@ img {
   background-image: url("../img/sprites.png");
   background-repeat: no-repeat;
   background-position: -20px -82px;
+  border: none;
   opacity: 0.2;
 }
 
@@ -502,6 +510,7 @@ img {
 
 .calendar:active {
   background-position: -20px -20px;
+  border: none;
 }
 
 .arrival-container label,
@@ -808,7 +817,7 @@ img {
       -ms-flex-align: baseline;
           align-items: baseline;
   padding-top: 28px;
-  padding-bottom: 28px;
+  padding-bottom: 32px;
   padding-right: 72px;
   padding-left: 72px;
   font-size: 12px;
@@ -873,7 +882,6 @@ img {
 
 .filter-pointers a {
   margin-left: 12px;
-  font-size: 0;
 }
 
 .arrow::before {
