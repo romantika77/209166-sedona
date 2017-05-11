@@ -28,8 +28,7 @@ img {
   height: auto;
 }
 
-.visually-hidden,
-.copyright .visually-hidden {
+.visually-hidden {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   width: 0;
@@ -622,11 +621,6 @@ img {
   background-image: url("../img/map.png");
 }
 
-.copyright img {
-  width: 113px;
-  height: 39px;
-}
-
 .select {
   background-color: #2a3e47;
   background-image: url("../img/filter-background.png");
@@ -1155,6 +1149,9 @@ figure {
   background-image: url("../img/html-logo-peace.png");
   background-repeat: no-repeat;
   background-position: center;
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .copyright a:hover {
@@ -1163,7 +1160,7 @@ figure {
 
 .copyright a:active {
   background-image: url("../img/html-logo-peace.png");
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 .sprite {
